@@ -1,5 +1,4 @@
-Certainly! Here are the concise notes in Markdown format:
-
+Quick notes
 ---
 
 ### 1. **Generic Software**
@@ -87,4 +86,4 @@ Certainly! Here are the concise notes in Markdown format:
 
 ---
 
-These notes should help you quickly review and understand the key concepts for your Software Engineering exam.
+Please go through your notes for more understanding
