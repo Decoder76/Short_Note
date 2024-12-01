@@ -85,5 +85,3 @@ Quick notes
 - **Benefits:** Enhances maintainability, performance, extends software lifespan.
 
 ---
-
-Please go through your notes for more understanding
