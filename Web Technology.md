@@ -1,85 +1,200 @@
-### **Unit 1: Introduction and Core Java**
+## **Unit 1: Introduction & Core Java**
 
-1. **Web Development Strategies**  
-   Web development strategies focus on identifying the target audience, ensuring accessibility across multiple devices and platforms, and optimizing web pages for low bandwidth. The design must provide a clear and user-friendly interface while maintaining smooth transitions between web pages. These strategies ensure that websites are functional, accessible, and visually appealing, catering to diverse user requirements.
+### **Introduction to Web Development**:
+- **History of Web and Internet**:
+  - The **internet** began as a research project (ARPANET) in the late 1960s, primarily designed for academic and military communication.
+  - The **World Wide Web (WWW)**, introduced by **Tim Berners-Lee** in 1989, was the first system to allow users to access websites via browsers using **hyperlinks**.
+  - **Web 1.0** (early 1990s to 2000s) was static and consisted primarily of text and images with no interactivity.
+  - **Web 2.0** (mid-2000s) introduced dynamic content, user-generated content, and interaction via social media and web applications (AJAX, JavaScript frameworks).
+  - **Web 3.0** refers to a **semantic web** where data is interconnected in meaningful ways, focusing on AI, machine learning, and decentralized technologies (blockchain).
 
-2. **History of the Internet and Web**  
-   The internet’s journey began with DARPA's research in 1972, leading to SGML in 1979 for structured content. The first web server was launched in 1991 by CERN. Key milestones include the creation of the HotJava browser by Sun Microsystems in 1995 and significant advancements in network protocols and web development.
+### **Web Protocols**:
+- **HTTP (HyperText Transfer Protocol)**:
+  - HTTP is a **stateless, request-response protocol** that facilitates communication between clients (web browsers) and servers.
+  - **HTTP Methods**: 
+    - **GET**: Retrieves data.
+    - **POST**: Sends data to be processed (e.g., form submissions).
+    - **PUT, DELETE**: Update and delete resources respectively.
+  - **Status Codes**:
+    - `200 OK`, `404 Not Found`, `500 Internal Server Error`.
 
-3. **Core Java**  
-   Java is a versatile, platform-independent programming language known for its simplicity, robustness, and object-oriented nature. Core Java concepts include:  
-   - **Features:** Multithreading, portability, and secure execution.  
-   - **Data Types:** Primitive (int, char) and Reference (objects, arrays).  
-   - **Operators:** Arithmetic, Relational, Logical, and Bitwise.  
-   - **Variables:** Local, Instance, and Static.  
-   Java’s architecture supports developing secure, scalable applications for both client and server environments.
+- **TCP/IP**:
+  - **Transmission Control Protocol** ensures **reliable, ordered delivery of data** packets between hosts over an IP network. 
+  - It involves **three-way handshakes** to establish a connection, ensuring data integrity and error correction.
+  - **IP (Internet Protocol)** handles addressing and routing of data packets.
 
-4. **Client-Server Computing**  
-   Client-server architecture facilitates interaction between a client (e.g., web browsers) and a server (e.g., web servers). Clients send requests, which servers process and respond to, enabling functionalities like resource fetching and data processing.
-
----
-
-### **Unit 2: Web Page Designing**
-
-1. **HTML (HyperText Markup Language)**  
-   HTML is the building block of web pages, allowing the creation of structured documents using elements such as lists, tables, images, and forms. It ensures the seamless organization of content on web pages. Combined with CSS, it provides styling options to enhance the user interface.
-
-2. **CSS (Cascading Style Sheets)**  
-   CSS is used to style HTML content, providing control over layout, fonts, colors, and spacing. It separates presentation from content, enabling developers to apply consistent styles across multiple web pages efficiently.
-
-3. **XML (eXtensible Markup Language)**  
-   XML allows the storage and transfer of data in a structured format. It supports validation via DTD and XML Schemas, and data manipulation through Object Models like DOM and SAX. XML is instrumental in creating interoperable applications.
-
-4. **Dynamic HTML (DHTML)**  
-   DHTML combines HTML, CSS, and JavaScript to create interactive and dynamic web pages. It enables features like animations, dynamic styling, and real-time content updates without requiring a page reload.
+- **UDP (User Datagram Protocol)**:
+  - Unlike TCP, UDP is **connectionless** and **faster**, as it does not ensure reliability or error correction.
+  - It’s commonly used in real-time applications like **streaming** (video/audio) or **online gaming**.
 
 ---
 
-### **Unit 3: Scripting and Networking**
+## **Unit 2: Web Page Designing**
 
-1. **JavaScript**  
-   JavaScript is a lightweight scripting language used to make web pages interactive. It supports functions, event handling, and object manipulation. Combined with AJAX, JavaScript enables asynchronous updates, enhancing the user experience by reducing page reloads.
+### **HTML (HyperText Markup Language)**:
+- HTML is the **standard markup language** for creating web pages. It structures content with **elements** (tags) such as headings, paragraphs, tables, and lists.
+  - **Tags** are the building blocks of HTML, such as `<html>`, `<head>`, `<body>`.
+  - Elements can have **attributes** that define their properties, such as `class`, `id`, `style`, and `href`.
 
-2. **Networking Protocols**  
-   - **HTTP (HyperText Transfer Protocol):** Enables communication between clients and servers, serving as the foundation of the web.  
-   - **TCP/IP:** Reliable communication protocol for transmitting data packets.  
-   - **UDP:** A lightweight protocol for fast, connectionless data transfer.  
-   - **ICMP:** Used for diagnostics, like ping tests.  
-   Networking protocols ensure efficient data exchange over the internet, enabling web applications to function seamlessly.
+- **Forms**:
+  - Forms allow users to submit data to a server. Common form elements include:
+    - `<input>` (text, password, checkbox, radio, etc.),
+    - `<select>`, `<textarea>`, `<button>`.
+  - **Form Attributes**:
+    - `action`: URL where data is sent.
+    - `method`: Specifies GET or POST request.
+
+### **CSS (Cascading Style Sheets)**:
+- **Styling**:
+  - CSS provides styling rules to HTML elements, such as fonts, colors, layouts, and positioning.
+  - **Selectors** are used to target HTML elements: 
+    - **Element selector** (`h1 { color: red; }`),
+    - **Class selector** (`.class-name { margin: 20px; }`),
+    - **ID selector** (`#id-name { padding: 10px; }`).
+  
+- **Layout Techniques**:
+  - **Flexbox**: Provides a way to lay out content dynamically, especially for responsive designs.
+  - **Grid Layout**: A powerful 2D layout system to create complex, grid-based layouts.
+  - **Positioning**: `static`, `relative`, `absolute`, and `fixed` positions.
+
+### **XML (Extensible Markup Language)**:
+- XML is used to store and transport data in a human-readable format. Unlike HTML, XML focuses on **data structure** rather than presentation.
+  - **Document Structure**:
+    - `<element>`: Encloses content in a meaningful structure.
+    - **Attributes**: Provide additional metadata to elements.
+  - **Validation**:
+    - **DTD (Document Type Definition)** and **XML Schema** define the structure and rules for XML documents.
+  
+---
+
+## **Unit 3: Scripting & Networking**
+
+### **JavaScript**:
+- **JavaScript** is a **scripting language** that enables interactivity and dynamic behavior in web pages.
+  - **Variables**: `var`, `let`, `const` for declaring variables.
+  - **Functions**:
+    ```javascript
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+    ```
+  - **Objects and Arrays**: 
+    - Objects store data in key-value pairs: 
+      ```javascript
+      let person = { name: "John", age: 25 };
+      ```
+    - Arrays store ordered data: 
+      ```javascript
+      let numbers = [1, 2, 3, 4];
+      ```
+
+- **DOM Manipulation**:
+  - JavaScript can **manipulate** HTML and CSS dynamically.
+  - Example:
+    ```javascript
+    document.getElementById("demo").innerHTML = "Hello, World!";
+    ```
+
+- **AJAX (Asynchronous JavaScript and XML)**:
+  - Allows the updating of parts of a webpage without reloading.
+  - Example:
+    ```javascript
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "data.json", true);
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+    };
+    xhr.send();
+    ```
+
+### **Networking**:
+- **Sockets**: Provide the mechanism for communication between clients and servers over a network.
+  - **TCP/IP Sockets** are used for reliable, connection-oriented communication.
+  - **UDP Sockets** are used for faster but unreliable communication.
 
 ---
 
-### **Unit 4: Enterprise Java Beans (EJB) and JDBC**
+## **Unit 4: Enterprise Java Beans (EJB) & JDBC**
 
-1. **Enterprise Java Beans (EJB)**  
-   EJB provides a framework for building robust, scalable enterprise applications. Types of EJBs include:  
-   - **Stateful Session Beans:** Maintain state across method calls.  
-   - **Stateless Session Beans:** Do not retain state; ideal for lightweight operations.  
-   - **Entity Beans:** Represent persistent data stored in a database.
+### **Enterprise Java Beans (EJB)**:
+- **JavaBeans** are **reusable software components** designed to encapsulate multiple objects into a single object (the bean).
+  - Types:
+    - **Stateful Session Beans**: Maintain client state across multiple method calls.
+    - **Stateless Session Beans**: Do not maintain any client state.
+    - **Message-Driven Beans**: Handle asynchronous messages.
+- **EJB Container**: Manages the lifecycle, security, transactions, and other services for beans.
 
-2. **JDBC (Java Database Connectivity)**  
-   JDBC allows Java applications to connect to databases for CRUD (Create, Read, Update, Delete) operations. Key features include:  
-   - **Prepared Statements:** Securely execute queries.  
-   - **Transaction Management:** Ensures data integrity.  
-   - **Stored Procedures:** Execute pre-defined SQL code.  
-   JDBC bridges Java applications with relational databases, enabling efficient data management.
+### **JDBC (Java Database Connectivity)**:
+- **JDBC** allows Java applications to interact with databases. The standard process involves:
+  1. **Loading the JDBC driver** (e.g., MySQL, PostgreSQL).
+  2. **Establishing a connection** to the database using `DriverManager.getConnection()`.
+  3. **Executing SQL queries** using `Statement` or `PreparedStatement`.
+  4. **Processing the results** (e.g., using `ResultSet`).
+  5. **Closing the connection** to free resources.
+
+- **Example**:
+  ```java
+  String query = "SELECT * FROM users WHERE age > ?";
+  PreparedStatement stmt = conn.prepareStatement(query);
+  stmt.setInt(1, 18);  // Set parameter value
+  ResultSet rs = stmt.executeQuery();
+  ```
+
+---
+
+## **Unit 5: Servlets & JSP**
+
+### **Servlets**:
+- A **Servlet** is a Java class that handles HTTP requests and responses.
+  - **Servlet Lifecycle**: 
+    1. **Initialization** (`init()`).
+    2. **Service** (`service()`): Handles requests.
+    3. **Destruction** (`destroy()`): Cleanup resources.
+  
+- **HTTP Methods**:
+  - **GET**: Retrieves data from the server.
+  - **POST**: Sends data to the server.
+  
+- **Session Management**:
+  - **Cookies**: Store data on the client side.
+  - **HttpSession**: Stores session data server-side.
+
+- **Example**:
+  ```java
+  @WebServlet("/hello")
+  public class HelloServlet extends HttpServlet {
+      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+          response.getWriter().println("Hello, World!");
+      }
+  }
+  ```
+
+### **Java Server Pages (JSP)**:
+- JSP is a **server-side technology** that allows embedding Java code in HTML pages using special JSP tags (`<% %>`).
+  - **Implicit Objects**: 
+    - `request`, `response`, `session`, `out`.
+  - **Directives**: Define page settings, such as language and content type.
+    ```jsp
+    <%@ page language="java" contentType="text/html" %>
+    ```
+  
+- **Example**:
+  ```jsp
+  <html>
+  <body>
+      <h1>Welcome, <%= request.getParameter("name") %></h1>
+  </body>
+  </html>
+  ```
 
 ---
 
-### **Unit 5: Servlets and Java Server Pages (JSP)**
+- Note :- For any further updates in given short notes, please commit and merge your branch with me.
+```
+   branch naming convection like web-{your_first_name}-{at which line of code}.
 
-1. **Servlets**  
-   Servlets are server-side Java programs that handle HTTP requests and generate dynamic responses. The servlet lifecycle includes:  
-   - **Initialization (init):** Preparing resources.  
-   - **Service (service):** Handling requests and responses.  
-   - **Destruction (destroy):** Cleaning up resources.  
-   Servlets support session tracking through cookies and HttpSession, enhancing user interactions on websites.
-
-2. **Java Server Pages (JSP)**  
-   JSP simplifies web development by embedding Java code within HTML to generate dynamic content. Features include:  
-   - **Implicit Objects:** Predefined variables for request, response, session, etc.  
-   - **Custom Tags:** Extend JSP functionality.  
-   - **Directives:** Control page attributes like imports and content types.  
-   JSP enables seamless integration of Java logic with web page layouts.
-
----
+   Ex.
+   suppose amit update at line 34 then branch name is web-amit-34.
+   commit what you update in 3 words.
+   
+```
